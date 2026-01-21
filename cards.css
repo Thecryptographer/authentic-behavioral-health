@@ -1,0 +1,234 @@
+/* ============================================
+   ACT Values Cards - Print-Ready Styles
+   Authentic Behavioral Health
+   ============================================ */
+
+:root {
+    /* Brand Colors - Modern Therapeutic */
+    --sage-green: #8FA88B;
+    --sage-light: #B5C9B1;
+    --dark-green: #2D4A3E;
+    --olive-text: #5A7058;
+    --cream: #FDFBF7;
+    --white: #FFFFFF;
+    
+    /* Card Dimensions - Standard Playing Card */
+    --card-width: 2.5in;
+    --card-height: 3.5in;
+    --card-padding: 0.2in;
+    --border-width: 8px;
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: #f5f5f5;
+    min-height: 100vh;
+}
+
+/* ============================================
+   Controls (hidden when printing)
+   ============================================ */
+.controls {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--sage-green), var(--dark-green));
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.controls h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.controls p {
+    opacity: 0.9;
+    margin-bottom: 1rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.controls button {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: white;
+    color: var(--dark-green);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.controls button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hint {
+    font-size: 0.85rem;
+    opacity: 0.7;
+    margin-top: 1rem;
+}
+
+/* ============================================
+   Card Grid (Screen View)
+   ============================================ */
+.print-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* ============================================
+   Individual Card Styling
+   ============================================ */
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    background: var(--white);
+    border: var(--border-width) solid var(--sage-green);
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: var(--card-padding);
+    position: relative;
+    page-break-inside: avoid;
+}
+
+.card-inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.card-value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--dark-green);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.card-description {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--olive-text);
+    line-height: 1.4;
+    max-width: 90%;
+    font-style: italic;
+}
+
+.card-branding {
+    position: absolute;
+    bottom: 0.35in;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.55rem;
+    font-weight: 500;
+    color: var(--sage-green);
+    letter-spacing: 0.02em;
+}
+
+/* Leaf decoration */
+.card-leaf {
+    position: absolute;
+    bottom: 0.6in;
+    right: 0.3in;
+    width: 0.6in;
+    height: 0.6in;
+    opacity: 0.3;
+}
+
+.card-leaf svg {
+    width: 100%;
+    height: 100%;
+    fill: var(--sage-green);
+}
+
+/* Category Cards (sorting piles) */
+.card.category {
+    background: linear-gradient(180deg, var(--cream) 0%, var(--white) 100%);
+}
+
+.card.category .card-value {
+    font-size: 1.2rem;
+}
+
+/* Blank "Other Value" cards */
+.card.blank .card-description {
+    border-bottom: 1px solid var(--sage-light);
+    width: 80%;
+    height: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* ============================================
+   Print Styles - 8 cards per letter page
+   ============================================ */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+    }
+
+    .print-container {
+        display: grid;
+        grid-template-columns: repeat(2, var(--card-width));
+        grid-template-rows: repeat(4, var(--card-height));
+        gap: 0.1in;
+        padding: 0.25in;
+        justify-content: center;
+        align-content: start;
+    }
+
+    .card {
+        margin: 0;
+        box-shadow: none;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    @page {
+        size: letter;
+        margin: 0.25in;
+    }
+}
+
+/* ============================================
+   Professional Printer View (with bleed)
+   ============================================ */
+.print-container.pro-print .card {
+    /* Add 0.125in bleed on all sides */
+    width: calc(var(--card-width) + 0.25in);
+    height: calc(var(--card-height) + 0.25in);
+    padding: calc(var(--card-padding) + 0.125in);
+}
