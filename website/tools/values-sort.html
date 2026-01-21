@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description"
+        content="ACT Values Card Sort - A clinical tool for exploring personal values. For clients of Authentic Behavioral Health.">
+
+    <title>Values Card Sort | Authentic Behavioral Health</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@1&family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="values-sort.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+
+<body>
+    <div class="sort-app">
+        <!-- Header -->
+        <header class="sort-header">
+            <div class="sort-header__logo">Authentic<span>BH</span></div>
+            <h1 class="sort-header__title">Values Card Sort</h1>
+            <p class="sort-header__subtitle">
+                Explore what matters most to you by sorting these values into categories that reflect their importance
+                in your life.
+            </p>
+        </header>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <div class="progress-bar-track">
+                <div class="progress-bar-fill" id="progress-bar"></div>
+            </div>
+            <span id="progress-text">0 of 83 cards sorted</span>
+        </div>
+
+        <!-- Main Sort Area -->
+        <main class="sort-main">
+            <!-- Card Deck -->
+            <section class="deck-section">
+                <h2 class="deck-section__title">Your Values</h2>
+
+                <div class="instructions">
+                    <h4>📱 How to Sort</h4>
+                    <p>Drag each card to a category that reflects how important this value is to you. There are no right
+                        or wrong answers.</p>
+                </div>
+
+                <div id="card-deck">
+                    <!-- Cards will be rendered here by JavaScript -->
+                </div>
+            </section>
+
+            <!-- Category Buckets -->
+            <section class="buckets-section">
+                <h2 class="buckets-section__title">Sort Into Categories</h2>
+                <div id="category-buckets">
+                    <!-- Buckets will be rendered here by JavaScript -->
+                </div>
+            </section>
+        </main>
+
+        <!-- Results Section (hidden until complete) -->
+        <section id="results-section">
+            <div class="results-container">
+                <h2>🎉 Congratulations!</h2>
+                <p>You've completed your values sort. Review your results below and discuss them with Dr. Malcolm during
+                    your next session.</p>
+
+                <textarea id="results-text" readonly></textarea>
+
+                <div class="results-buttons">
+                    <button id="copy-btn" class="btn btn--primary">Copy Results</button>
+                    <button id="reset-btn" class="btn btn--ghost">Start Over</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="sort-footer">
+            <p>
+                Authentic Behavioral Health | Dr. Lydia R. Malcolm, PhD<br>
+                <a href="../contact.html">Contact</a> • <a href="tel:9547155477">(954) 715-5477</a>
+            </p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="values-sort.js"></script>
+</body>
+
+</html>
