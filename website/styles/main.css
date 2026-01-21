@@ -362,7 +362,7 @@ p {
 .nav__links {
     display: flex;
     align-items: center;
-    gap: var(--space-xl);
+    gap: var(--space-lg);
 }
 
 .nav__link {
@@ -1093,6 +1093,22 @@ p {
     .footer__grid {
         grid-template-columns: 1fr 1fr;
         gap: var(--space-2xl);
+    }
+}
+
+/* Mid-range screens - Ensure all 7 nav items fit comfortably */
+@media (max-width: 1200px) and (min-width: 769px) {
+    .nav__links {
+        gap: var(--space-md);
+    }
+
+    .nav__link {
+        font-size: 0.8rem;
+        padding: var(--space-xs) 0;
+    }
+
+    .nav__inner {
+        padding: 0 var(--space-lg);
     }
 }
 
