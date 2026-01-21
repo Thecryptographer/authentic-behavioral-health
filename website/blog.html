@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Mental health articles and resources from Dr. Lydia Malcolm. Learn about anxiety, stress management, and well-being.">
+
+    <title>Blog | Authentic Behavioral Health</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital@1&family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="nav__inner">
+            <a href="index.html" class="nav__logo">Authentic<span>BH</span></a>
+            <button class="nav__toggle" id="nav-toggle" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="index.html" class="nav__link">Home</a></li>
+                <li><a href="about.html" class="nav__link">About</a></li>
+                <li><a href="services.html" class="nav__link">Services</a></li>
+                <li><a href="workshops.html" class="nav__link">Workshops</a></li>
+                <li><a href="human-trafficking.html" class="nav__link">Human Trafficking</a></li>
+                <li><a href="blog.html" class="nav__link nav__link--active">Blog</a></li>
+                <li><a href="contact.html" class="nav__link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="section section--bg-primary" style="padding-top: calc(var(--nav-height) + var(--space-4xl));">
+        <div class="container">
+            <div class="text-center" data-animate>
+                <span class="hero__badge">📚 Resources & Insights</span>
+                <h1 style="color: white;">Blog & Articles</h1>
+                <p class="hero__subtitle" style="margin: 0 auto;">
+                    Educational resources to support your mental health journey. Explore articles on anxiety, stress,
+                    sleep, and well-being.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section class="section">
+        <div class="container">
+            <div class="service-detail" data-animate
+                style="background: linear-gradient(135deg, var(--color-background) 0%, var(--color-background-alt) 100%);">
+                <span class="about-preview__label">Featured Article</span>
+
+                <div
+                    style="display: grid; grid-template-columns: 1fr 1.5fr; gap: var(--space-3xl); align-items: center; margin-top: var(--space-lg);">
+                    <div
+                        style="background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark)); border-radius: var(--radius-xl); aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 5rem;">🧠</span>
+                    </div>
+
+                    <div>
+                        <span class="blog-card__category">Getting Started</span>
+                        <h2>Anxiety: Friend or Foe?</h2>
+                        <p class="lead">
+                            Understanding the dual nature of anxiety—when it helps us and when it holds us back.
+                        </p>
+                        <p>
+                            Anxiety isn't always the enemy. In appropriate amounts, anxiety can be a powerful motivator
+                            and protector. But when anxiety becomes excessive or chronic, it can interfere with daily
+                            life and well-being. Learn to recognize the difference and develop strategies for managing
+                            unhelpful anxiety.
+                        </p>
+                        <a href="#" class="btn btn--primary mt-lg">Read Full Article</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="section section--bg-alt">
+        <div class="container">
+            <div class="text-center mb-2xl" data-animate>
+                <span class="about-preview__label" style="justify-content: center;">All Articles</span>
+                <h2>Explore Our Resources</h2>
+            </div>
+
+            <div class="blog-grid" data-animate>
+                <!-- Article 1 -->
+                <article class="blog-card">
+                    <div class="blog-card__image" style="display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">😴</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__category">Sleep</span>
+                        <h4 class="blog-card__title">5 Sleep Hygiene Tips You Can Start Tonight</h4>
+                        <p class="blog-card__excerpt">
+                            Simple changes to your environment and routine that can make a big difference in your sleep
+                            quality.
+                        </p>
+                        <a href="#" class="card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card">
+                    <div class="blog-card__image" style="display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">🧘</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__category">Mindfulness</span>
+                        <h4 class="blog-card__title">Mindfulness for Beginners: A 5-Minute Practice</h4>
+                        <p class="blog-card__excerpt">
+                            You don't need an hour of meditation to experience the benefits of mindfulness. Start with
+                            just five minutes.
+                        </p>
+                        <a href="#" class="card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card">
+                    <div class="blog-card__image" style="display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">💼</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__category">Stress</span>
+                        <h4 class="blog-card__title">Managing Workplace Stress: A Psychologist's Guide</h4>
+                        <p class="blog-card__excerpt">
+                            Practical strategies for maintaining your mental health in demanding work environments.
+                        </p>
+                        <a href="#" class="card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card">
+                    <div class="blog-card__image" style="display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">🌅</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__category">Your Community</span>
+                        <h4 class="blog-card__title">Finding Support: Building Your Mental Health Community</h4>
+                        <p class="blog-card__excerpt">
+                            Why connection matters for mental health and how to cultivate supportive relationships.
+                        </p>
+                        <a href="#" class="card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card">
+                    <div class="blog-card__image" style="display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">❤️</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__category">Health Psychology</span>
+                        <h4 class="blog-card__title">The Mind-Body Connection: What Research Tells Us</h4>
+                        <p class="blog-card__excerpt">
+                            Exploring the scientific evidence behind the powerful relationship between mental and
+                            physical health.
+                        </p>
+                        <a href="#" class="card__link">Read More →</a>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card">
+                    <div class="blog-card__image" style="display: flex; align-items: center; justify-content: center;">
+                        <span style="font-size: 3rem;">🎯</span>
+                    </div>
+                    <div class="blog-card__content">
+                        <span class="blog-card__category">Getting Started</span>
+                        <h4 class="blog-card__title">What to Expect in Your First Therapy Session</h4>
+                        <p class="blog-card__excerpt">
+                            A guide to help you feel prepared and comfortable as you begin your therapy journey.
+                        </p>
+                        <a href="#" class="card__link">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center mb-2xl" data-animate>
+                <span class="about-preview__label" style="justify-content: center;">Browse by Topic</span>
+                <h2>Categories</h2>
+            </div>
+
+            <div style="display: flex; gap: var(--space-md); justify-content: center; flex-wrap: wrap;" data-animate>
+                <a href="#" class="btn btn--outline">Getting Started</a>
+                <a href="#" class="btn btn--outline">Your Community</a>
+                <a href="#" class="btn btn--outline">Anxiety</a>
+                <a href="#" class="btn btn--outline">Depression</a>
+                <a href="#" class="btn btn--outline">Sleep</a>
+                <a href="#" class="btn btn--outline">Mindfulness</a>
+                <a href="#" class="btn btn--outline">Stress</a>
+                <a href="#" class="btn btn--outline">Health Psychology</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section--bg-primary">
+        <div class="container text-center" data-animate>
+            <h2 style="color: white; margin-bottom: var(--space-md);">Have Questions?</h2>
+            <p
+                style="color: rgba(255,255,255,0.85); font-size: var(--text-xl); max-width: 600px; margin: 0 auto var(--space-2xl);">
+                Ready to take the next step? Schedule a consultation with Dr. Malcolm.
+            </p>
+            <a href="contact.html" class="btn btn--white btn--lg">Contact Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <div class="footer__logo">Authentic<span>BH</span></div>
+                    <p class="footer__desc">Compassionate, evidence-based psychological care.</p>
+                    <div class="footer__emergency">
+                        <h6>⚠️ Crisis Resources</h6>
+                        <p>If you feel at risk, call <strong style="color: white;">988</strong> or <strong
+                                style="color: white;">911</strong>.</p>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="footer__title">Quick Links</h5>
+                    <div class="footer__links">
+                        <a href="index.html" class="footer__link">Home</a>
+                        <a href="about.html" class="footer__link">About</a>
+                        <a href="services.html" class="footer__link">Services</a>
+                        <a href="workshops.html" class="footer__link">Workshops</a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="footer__title">Resources</h5>
+                    <div class="footer__links">
+                        <a href="blog.html" class="footer__link">Blog</a>
+                        <a href="human-trafficking.html" class="footer__link">Human Trafficking</a>
+                        <a href="contact.html" class="footer__link">Contact</a>
+                    </div>
+                </div>
+                <div>
+                    <h5 class="footer__title">Contact</h5>
+                    <div class="footer__links">
+                        <a href="tel:9547155477" class="footer__link">(954) 715-5477</a>
+                        <a href="mailto:Dr.Lydia@authenticbh.com" class="footer__link">Dr.Lydia@authenticbh.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p class="footer__copyright">© 2024 Authentic Behavioral Health, LLC.</p>
+                <p class="footer__copyright">Lydia R. Malcolm, Ph.D.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const navToggle = document.getElementById('nav-toggle');
+        const navLinks = document.getElementById('nav-links');
+        navToggle.addEventListener('click', () => { navLinks.classList.toggle('active'); });
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => { nav.classList.toggle('nav--scrolled', window.scrollY > 100); });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+        document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    </script>
+</body>
+
+</html>
